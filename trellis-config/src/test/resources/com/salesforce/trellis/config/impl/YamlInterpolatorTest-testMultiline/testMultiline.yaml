@@ -1,0 +1,4 @@
+properties:
+  trellis.whitelist.headerComment: |
+    foo bar baz
+    bing boopy boo

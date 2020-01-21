@@ -1,0 +1,8 @@
+rules:
+
+- action: WARN
+  from:
+  - foo:bar
+  to:
+  - baz:bop
+  scope: compile

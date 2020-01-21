@@ -1,0 +1,9 @@
+rules:
+  - action: DENY
+    from:
+      - myapp:foo
+      - myapp:bar
+      - myapp:baz
+    to:
+      - myapp:evil
+    whitelist: testEvaporation-whitelist.yaml

@@ -1,0 +1,62 @@
+
+whitelists:
+- file: /no_such_file.yaml
+  action: ALLOW
+
+- action: BAD_ACTION_TWO
+
+groups:
+- name: PE_ ABC BAD NAME
+  includes:
+  - sfdc.core:platform-encryption
+
+- name: PE_APIS
+  includes:
+  - sfdc.core:platform-encryption-apis
+
+- includes:
+  - sfdc.core:platform-encryption-stuff
+
+- name: BAD_GROUP
+  includes:
+  - NO_SUCH_GROUP
+  except:
+  - NO_SUCH_GROUP
+
+- name: POM_BAD
+  pomDependencies:
+  - /absolute/path/oops.yaml
+
+rules:
+- action: DENY
+  from: [PE_APIS]
+  to: [PE_IMPLS]
+
+- action: BAD_ACTION_ONE
+  from: [PE_APIS]
+  to:
+  - sfdc.core:*
+
+- action: DENY
+  from: [NO_SUCH_GROUP]
+  exceptFrom: [NO_SUCH_GROUP]
+  to:
+  - NO_SUCH_GROUP
+  exceptTo:
+  - NO_SUCH_GROUP
+
+- action: DENY
+  from:
+  - any:any
+  to:
+  - any:any
+
+- action: DENY
+  from:
+  - any:any
+  to:
+  - any:any
+  distance: BAD_DISTANCE
+  optionality: BAD_OPTIONALITY
+  scope: badscope
+

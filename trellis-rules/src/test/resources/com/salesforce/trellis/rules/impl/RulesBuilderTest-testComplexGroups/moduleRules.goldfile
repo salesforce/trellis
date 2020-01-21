@@ -1,0 +1,73 @@
+{
+  "rules" : [ {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "OrMatcher",
+      "matchers" : [ {
+        "@type" : "WildcardMatcher",
+        "expression" : "junit:*"
+      }, {
+        "@type" : "WildcardMatcher",
+        "expression" : "sfdc.core:*"
+      }, {
+        "@type" : "WildcardMatcher",
+        "expression" : "junit:*"
+      }, {
+        "@type" : "WildcardMatcher",
+        "expression" : "sfdc.core:*"
+      }, {
+        "@type" : "WildcardMatcher",
+        "expression" : "sfdc.ui:*"
+      } ]
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false,
+      "reason" : "BAZ"
+    },
+    "toMatcher" : {
+      "@type" : "SimpleMatcher",
+      "coordinates" : {
+        "artifactId" : "bing",
+        "groupId" : "sfdc.core"
+      }
+    }
+  }, {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "OrMatcher",
+      "matchers" : [ {
+        "@type" : "WildcardMatcher",
+        "expression" : "junit:*"
+      }, {
+        "@type" : "WildcardMatcher",
+        "expression" : "sfdc.core:*"
+      }, {
+        "@type" : "WildcardMatcher",
+        "expression" : "sfdc.ui:*"
+      }, {
+        "@type" : "SimpleMatcher",
+        "coordinates" : {
+          "artifactId" : "bar",
+          "groupId" : "sfdc.core"
+        }
+      } ]
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false,
+      "reason" : "BOP"
+    },
+    "toMatcher" : {
+      "@type" : "SimpleMatcher",
+      "coordinates" : {
+        "artifactId" : "bing",
+        "groupId" : "sfdc.core"
+      }
+    }
+  } ]
+}

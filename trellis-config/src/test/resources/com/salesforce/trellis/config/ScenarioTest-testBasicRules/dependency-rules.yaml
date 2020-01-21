@@ -1,0 +1,19 @@
+groups:
+- name: PRODUCTION_CODE
+  includes:
+  - myapp:*
+
+rules:
+  - action: DENY
+    from: [PRODUCTION_CODE]
+    exceptFrom:
+      - myapp:special-module
+    to:
+      - myapp:bad-module
+    reason: only special-module is allowed to depend on bad-module
+
+  - action: DENY
+    from: [PRODUCTION_CODE]
+    to:
+      - myapp:really-bad-module
+    reason: no one is allowed to depend on really-bad-module

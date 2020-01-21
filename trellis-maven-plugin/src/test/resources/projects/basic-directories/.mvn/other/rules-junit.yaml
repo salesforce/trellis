@@ -1,0 +1,13 @@
+
+groups:
+- name: TEST_IMPLS
+  includes:
+  - com.salesforce.trellis.tests:module1
+
+rules:
+- action: DENY
+  from:
+  - TEST_IMPLS
+  to:
+  - junit:junit
+  whitelist: whitelist.yaml

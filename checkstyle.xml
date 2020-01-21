@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+
+<module name="Checker">
+    <module name="TreeWalker">
+        <module name="AvoidStarImport" />
+        <module name="IllegalImport" />
+        <module name="RedundantImport" />
+        <module name="LineLength">
+            <property name="max" value="120" /> <!-- should probably make this 100 -->
+            <property name="ignorePattern"
+                value="^package.*|^import.*|a href|href|http://|https://|ftp://" />
+        </module>
+        <module name="MethodLength" />
+        <module name="MethodParamPad" />
+        <module name="ParenPad" />
+        <module name="EmptyStatement" />
+        <module name="EqualsHashCode" />
+        <module name="IllegalInstantiation" />
+        <module name="InnerAssignment" />
+        <module name="InterfaceIsType" />
+        <module name="VisibilityModifier" />
+        <module name="ArrayTypeStyle" />
+        <module name="UpperEll" />
+        <module name="NoFinalizer" />
+        <module name="MissingDeprecated" />
+    </module>
+    <module name="FileTabCharacter" />
+    <module name="RegexpSingleline">
+        <property name="format" value="[\t]+$" />
+        <property name="message" value="Trailing whitespace" />
+    </module>
+</module>

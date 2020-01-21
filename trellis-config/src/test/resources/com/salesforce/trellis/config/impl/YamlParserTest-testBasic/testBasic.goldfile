@@ -1,0 +1,123 @@
+{
+  "allRules" : [ {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "SimpleMatcher",
+      "coordinates" : {
+        "artifactId" : "platform-encryption-api",
+        "groupId" : "sfdc.core"
+      }
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false
+    },
+    "toMatcher" : {
+      "@type" : "SimpleMatcher",
+      "coordinates" : {
+        "artifactId" : "platform-encryption",
+        "groupId" : "sfdc.core"
+      }
+    }
+  }, {
+    "applicableScopes" : [ "compile" ],
+    "distance" : "DIRECT_ONLY",
+    "fromMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "sfdc.core:activities*"
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false,
+      "reason" : "wat?"
+    },
+    "toMatcher" : {
+      "@type" : "SimpleMatcher",
+      "coordinates" : {
+        "artifactId" : "platform-encryption",
+        "groupId" : "sfdc.core"
+      }
+    }
+  }, {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "NotMatcher",
+      "negatedMatcher" : {
+        "@type" : "OrMatcher",
+        "matchers" : [ {
+          "@type" : "SimpleMatcher",
+          "coordinates" : {
+            "artifactId" : "module",
+            "groupId" : "special"
+          }
+        }, {
+          "@type" : "WildcardMatcher",
+          "expression" : "sfdc.core:*"
+        } ]
+      }
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false
+    },
+    "toMatcher" : {
+      "@type" : "SimpleMatcher",
+      "coordinates" : {
+        "artifactId" : "module",
+        "groupId" : "bad"
+      }
+    }
+  }, {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "myapp:*"
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : true,
+      "permissible" : true
+    },
+    "toMatcher" : {
+      "@type" : "AndMatcher",
+      "matchers" : [ {
+        "@type" : "WildcardMatcher",
+        "expression" : "bad:*"
+      }, {
+        "@type" : "NotMatcher",
+        "negatedMatcher" : {
+          "@type" : "SimpleMatcher",
+          "coordinates" : {
+            "artifactId" : "special",
+            "groupId" : "bad"
+          }
+        }
+      } ]
+    }
+  }, {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "myapp:*"
+    },
+    "optionality" : "OPTIONAL_ONLY",
+    "perm" : {
+      "discouraged" : true,
+      "permissible" : true
+    },
+    "toMatcher" : {
+      "@type" : "SimpleMatcher",
+      "coordinates" : {
+        "artifactId" : "thing",
+        "groupId" : "private"
+      }
+    }
+  } ]
+}

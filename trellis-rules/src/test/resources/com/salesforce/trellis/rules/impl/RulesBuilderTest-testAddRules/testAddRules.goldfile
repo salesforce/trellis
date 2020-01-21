@@ -1,0 +1,51 @@
+{
+  "allRules" : [ {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "foo1:*"
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false
+    },
+    "toMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "bar1:*"
+    }
+  }, {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "foo2:*"
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false
+    },
+    "toMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "bar2:*"
+    }
+  }, {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "foo3:*"
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false
+    },
+    "toMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "bar3:*"
+    }
+  } ]
+}

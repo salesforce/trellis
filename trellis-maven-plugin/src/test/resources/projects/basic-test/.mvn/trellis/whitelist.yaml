@@ -1,0 +1,12 @@
+#
+# ORIGINAL COMMENT this should get overwritten by
+#   the comment configured in the plugin
+#
+---
+rules:
+- action: ALLOW
+  from:
+  - sfdc.core:previously-whitelisted-module
+  to:
+  - junit:junit
+  scope: compile

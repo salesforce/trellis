@@ -1,0 +1,20 @@
+whitelists:
+- file: testBasicWhitelist-whitelist.yaml
+  headerComment: This is the header comment for testBasicWhitelist.
+  action: WARN
+
+groups:
+- name: PRODUCTION_CODE
+  includes:
+  - sfdc.core:*
+
+- name: JUNIT
+  includes:
+  - junit:junit
+
+rules:
+- action: DENY
+  from: [PRODUCTION_CODE]
+  to: [JUNIT]
+  reason: Production code shouldn't depend on test frameworks.
+  whitelist: testBasicWhitelist-whitelist.yaml
