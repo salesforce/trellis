@@ -27,8 +27,8 @@ import java.util.function.Function;
 public class MockMavenHelper implements MavenHelper {
 
     private static final String USER_HOME_KEY = "user.home";
-    private static final String USER_HOME_VALUE = "/home/pcalahan/";
-    private static final Path POM_PATH = Paths.get("/home/pcalahan/my/pom.xml");
+    private static final String USER_HOME_VALUE = "/fake/home/dir/";
+    private static final Path POM_PATH = Paths.get("/fake/home/dir/my/pom.xml");
     private final FixedStringSearchInterpolator interpolator;
 
     public MockMavenHelper() {
