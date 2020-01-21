@@ -1,0 +1,8 @@
+rules:
+
+- action: WARN
+  from:
+  - myapp:bar
+  - myapp:baz
+  to:
+  - myapp:evil

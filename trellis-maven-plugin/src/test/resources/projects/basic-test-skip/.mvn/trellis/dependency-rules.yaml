@@ -1,0 +1,21 @@
+whitelists:
+- file: whitelist.yaml
+  headerComment: headerComment says this is a GENERATED FILE!
+  action: WARN
+
+groups:
+- name: TEST_IMPLS
+  includes:
+  - com.salesforce.trellis.tests:module1
+
+- name: TEST_APIS
+  includes:
+  - com.salesforce.trellis.tests:module2
+
+rules:
+- action: DENY
+  from:
+  - TEST_APIS
+  to:
+  - TEST_IMPLS
+  whitelist: whitelist.yaml

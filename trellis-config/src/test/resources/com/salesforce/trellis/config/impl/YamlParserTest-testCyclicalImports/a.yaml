@@ -1,0 +1,7 @@
+rules:
+  - action: DENY
+    from:
+      - foo:bar
+    to:
+      - bar:baz
+    whitelist: b.yaml

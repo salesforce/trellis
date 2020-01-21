@@ -1,0 +1,22 @@
+groups:
+
+- name: PE_APIS
+  includes:
+  - sfdc.core:platform-encryption-api
+
+- name: PE_IMPLS
+  includes:
+  - sfdc.core:platform-encryption
+  - sfdc.shared:bar
+  - sfdc.shared:baz
+  - sfdc.shared:foo
+  - sfdc.ui:*
+
+rules:
+
+- action: DENY
+  from:
+  - PE_APIS
+  to:
+  - PE_IMPLS
+  reason: hello!

@@ -1,0 +1,10 @@
+rules:
+
+- action: WARN
+  from:
+  - sfdc.core:newly-whitelisted-model
+  - sfdc.core:platform-encryption
+  to:
+  - junit:junit
+  reason: Production code shouldn't depend on test frameworks.
+  scope: compile

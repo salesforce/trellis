@@ -1,0 +1,10 @@
+whitelists:
+  - file: c.yaml
+
+rules:
+  - action: DENY
+    from:
+      - foo:bar
+    to:
+      - bar:baz
+    whitelist: c.yaml

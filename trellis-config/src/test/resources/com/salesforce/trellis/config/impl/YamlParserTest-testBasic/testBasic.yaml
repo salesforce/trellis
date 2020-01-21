@@ -1,0 +1,60 @@
+properties:
+  foo: 12
+
+groups:
+- name: PE_IMPLS
+  includes:
+  - sfdc.core:platform-encryption
+
+- name: PE_APIS
+  includes:
+  - sfdc.core:platform-encryption-api
+
+- name: ACTIVITIES
+  includes:
+  - sfdc.core:activities*
+
+- name: ALL_PRODUCTION_CODE
+  pomDependencies:
+  - ${user.home}/my/pom.xml
+
+- name: MOST_STUFF
+  includes:
+  - "*:*"
+  except:
+  - bad:bad
+  - special:special
+
+rules:
+- action: DENY
+  from: [PE_APIS]
+  to: [PE_IMPLS]
+
+- action: DENY
+  from: [ACTIVITIES]
+  to: [PE_IMPLS]
+  scope: compile
+  distance: DIRECT_ONLY
+  reason: wat?
+
+- action: DENY
+  exceptFrom:
+  - special:module
+  - sfdc.core:*
+  to:
+  - bad:module
+
+- action: WARN
+  from:
+    - myapp:*
+  to:
+    - bad:*
+  exceptTo:
+    - bad:special
+
+- action: WARN
+  from:
+    - myapp:*
+  to:
+    - private:thing
+  optionality: OPTIONAL_ONLY

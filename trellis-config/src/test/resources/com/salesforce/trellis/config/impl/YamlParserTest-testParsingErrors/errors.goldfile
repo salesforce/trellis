@@ -1,0 +1,105 @@
+[ {
+  "columnNumberOrNull" : 1,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 8,
+  "message" : "'whitelist' is missing required 'file'",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "RuleBuildingException: PE_ ABC BAD NAME is not a valid group name",
+  "columnNumberOrNull" : 1,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 13,
+  "message" : "PE_ ABC BAD NAME is not a valid group name",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "RuleBuildingException: no group name provided",
+  "columnNumberOrNull" : 1,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 20,
+  "message" : "no group name provided",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "RuleBuildingException: Invalid group name 'NO_SUCH_GROUP'",
+  "columnNumberOrNull" : 18,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 22,
+  "message" : "Invalid group name 'NO_SUCH_GROUP'",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "RuleBuildingException: Invalid group name 'NO_SUCH_GROUP'",
+  "columnNumberOrNull" : 18,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 24,
+  "message" : "Invalid group name 'NO_SUCH_GROUP'",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "RuleBuildingException: no group include provided",
+  "columnNumberOrNull" : 1,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 30,
+  "message" : "no group include provided",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "RuleBuildingException: Invalid group name 'PE_IMPLS'",
+  "columnNumberOrNull" : 16,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 33,
+  "message" : "Invalid group name 'PE_IMPLS'",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "IllegalArgumentException: No enum constant com.salesforce.trellis.rules.builder.RuleAction.BAD_ACTION_ONE",
+  "columnNumberOrNull" : 25,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 35,
+  "message" : "No enum constant com.salesforce.trellis.rules.builder.RuleAction.BAD_ACTION_ONE",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "RuleBuildingException: Invalid group name 'NO_SUCH_GROUP'",
+  "columnNumberOrNull" : 23,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 41,
+  "message" : "Invalid group name 'NO_SUCH_GROUP'",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "RuleBuildingException: Invalid group name 'NO_SUCH_GROUP'",
+  "columnNumberOrNull" : 29,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 42,
+  "message" : "Invalid group name 'NO_SUCH_GROUP'",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "RuleBuildingException: Invalid group name 'NO_SUCH_GROUP'",
+  "columnNumberOrNull" : 18,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 44,
+  "message" : "Invalid group name 'NO_SUCH_GROUP'",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "RuleBuildingException: Invalid group name 'NO_SUCH_GROUP'",
+  "columnNumberOrNull" : 18,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 46,
+  "message" : "Invalid group name 'NO_SUCH_GROUP'",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "IllegalArgumentException: No enum constant com.salesforce.trellis.rules.impl.DependencyScopeFactory.MavenDependencyScope.badscope",
+  "columnNumberOrNull" : 18,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 61,
+  "message" : "No enum constant com.salesforce.trellis.rules.impl.DependencyScopeFactory.MavenDependencyScope.badscope",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "IllegalArgumentException: No enum constant com.salesforce.trellis.rules.builder.RuleDistance.BAD_DISTANCE",
+  "columnNumberOrNull" : 25,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 59,
+  "message" : "No enum constant com.salesforce.trellis.rules.builder.RuleDistance.BAD_DISTANCE",
+  "type" : "ERROR"
+}, {
+  "causeOrNull" : "IllegalArgumentException: No enum constant com.salesforce.trellis.rules.builder.RuleOptionality.BAD_OPTIONALITY",
+  "columnNumberOrNull" : 25,
+  "file" : "testParsingErrors.yaml",
+  "lineNumberOrNull" : 59,
+  "message" : "No enum constant com.salesforce.trellis.rules.builder.RuleOptionality.BAD_OPTIONALITY",
+  "type" : "ERROR"
+} ]

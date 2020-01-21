@@ -57,7 +57,7 @@ rules:
 groups:
 - name: PRODUCTION_CODE
   includes:
-  - my:*
+  - my.app:*
 
 - name: TEST_FRAMEWORKS
   includes:
@@ -66,7 +66,7 @@ groups:
 rules:
 - action: DENY
   from: [PRODUCTION_CODE]
-  exceptFrom: [sfdc.core:miscreant]
+  exceptFrom: [my.app:special-case]
   to: [TEST_FRAMEWORKS]
   reason: prod code should be using test frameworks
   
@@ -76,16 +76,3 @@ rules:
 
 Detailed usage documentation is available in [here](USAGE.md).
 
-## SFCI
-
-**Development:** https://cbxci.dop.sfdc.net/job/maven/job/trellis/
-
-**Release:** https://sfcirelease.dop.sfdc.net/job/maven/job/maven-trellis/job/trellis/
-
-![Build Status](https://sfcirelease.dop.sfdc.net/buildStatus/icon?job=maven/maven-trellis/trellis/master)
-
-
-## Nexus
-
-https://nexus.soma.salesforce.com/nexus/content/groups/public/com/salesforce/trellis/
-# trellis

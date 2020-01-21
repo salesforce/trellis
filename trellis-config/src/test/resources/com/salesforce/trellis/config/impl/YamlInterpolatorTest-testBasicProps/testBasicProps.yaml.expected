@@ -1,0 +1,22 @@
+rules:
+
+- action: DENY
+  from:
+  - myapp:from1
+  to:
+  - myapp:to1
+  reason: this is the default reason
+
+- action: DENY
+  from:
+  - myapp:from2
+  to:
+  - myapp:to2
+  reason: this is the reason for the second one
+
+- action: DENY
+  from:
+  - myapp:from3
+  to:
+  - myapp:to3
+  reason: just an old sweet song

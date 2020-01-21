@@ -1,0 +1,35 @@
+{
+  "allRules" : [ {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "sfdc.core:*-impl"
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : true
+    },
+    "toMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "sfdc.core:*-api"
+    }
+  }, {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "*"
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false
+    },
+    "toMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "*"
+    }
+  } ]
+}

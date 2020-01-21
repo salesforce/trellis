@@ -1,0 +1,19 @@
+#
+# ==== GENERATED FILE!  DO NOT EDIT! ====
+#
+rules:
+
+- action: ALLOW
+  from:
+  - sfdc.core:previously-whitelisted-module
+  to:
+  - junit:junit
+  scope: compile
+
+- action: WARN
+  from:
+  - com.salesforce.trellis.tests:module2
+  to:
+  - com.salesforce.trellis.tests:module1
+  reason: Whitelist 1 Warning - Implementation modules are not allowed to be used in API modules.
+  scope: compile

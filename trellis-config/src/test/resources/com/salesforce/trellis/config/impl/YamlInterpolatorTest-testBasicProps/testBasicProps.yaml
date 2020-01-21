@@ -1,0 +1,32 @@
+properties:
+  reason2: this is the reason for the second one
+  trellis.rule.reason: this is the default reason
+  somewhere: somwehere
+  line: just ${an.old} ${sweet.song}
+  an: an
+  sweet: sweet
+  song: song
+  sweet.song: ${sweet} ${song}
+  an.old: ${an} old
+
+rules:
+
+  - action: DENY
+    from:
+      - myapp:from1
+    to:
+      - myapp:to1
+
+  - action: DENY
+    from:
+      - myapp:from2
+    to:
+      - myapp:to2
+    reason: ${reason2}
+
+  - action: DENY
+    from:
+      - myapp:from3
+    to:
+      - myapp:to3
+    reason: ${line}

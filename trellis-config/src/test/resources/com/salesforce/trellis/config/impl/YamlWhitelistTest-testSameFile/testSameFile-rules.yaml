@@ -1,0 +1,15 @@
+
+rules:
+- action: DENY
+  from:
+  - "*:*"
+  to:
+  - foo:foo
+  whitelist: testSameFile-whitelist.yaml
+
+- action: DENY
+  from:
+  - "*:*"
+  to:
+  - bar:bar
+  whitelist: testSameFile-whitelist.yaml

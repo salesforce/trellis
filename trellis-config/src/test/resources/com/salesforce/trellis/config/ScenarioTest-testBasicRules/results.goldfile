@@ -1,0 +1,39 @@
+# myapp:foo -> myapp:foo
+{
+  "discouraged" : false,
+  "permissible" : true
+}
+
+# myapp:foo -> myapp:bad-module
+{
+  "discouraged" : false,
+  "permissible" : false,
+  "reason" : "only special-module is allowed to depend on bad-module"
+}
+
+# myapp:foo -> myapp:really-bad-module
+{
+  "discouraged" : false,
+  "permissible" : false,
+  "reason" : "no one is allowed to depend on really-bad-module"
+}
+
+# myapp:special-module -> myapp:foo
+{
+  "discouraged" : false,
+  "permissible" : true
+}
+
+# myapp:special-module -> myapp:bad-module
+{
+  "discouraged" : false,
+  "permissible" : true
+}
+
+# myapp:special-module -> myapp:really-bad-module
+{
+  "discouraged" : false,
+  "permissible" : false,
+  "reason" : "no one is allowed to depend on really-bad-module"
+}
+

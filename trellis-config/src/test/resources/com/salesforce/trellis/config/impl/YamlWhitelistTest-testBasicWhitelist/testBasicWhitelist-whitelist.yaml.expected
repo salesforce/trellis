@@ -1,0 +1,21 @@
+#
+# This is the header comment for testBasicWhitelist.
+#
+rules:
+
+- action: WARN
+  from:
+  - sfdc.core:another-whitelisted-model
+  - sfdc.core:newly-whitelisted-model
+  - sfdc.core:platform-encryption
+  to:
+  - junit:junit
+  reason: Production code shouldn't depend on test frameworks.
+  scope: compile
+
+- action: WARN
+  from:
+  - sfdc.core:unprocessed-module
+  to:
+  - junit:junit
+  reason: This should be retained in the updated whitelist because the module was not processed

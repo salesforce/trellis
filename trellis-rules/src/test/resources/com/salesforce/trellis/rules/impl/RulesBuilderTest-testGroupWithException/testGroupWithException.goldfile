@@ -1,0 +1,32 @@
+{
+  "allRules" : [ {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "WildcardMatcher",
+      "expression" : "*:*"
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false,
+      "reason" : "No one can depend on anything in verboten except for verboten:allowed"
+    },
+    "toMatcher" : {
+      "@type" : "AndMatcher",
+      "matchers" : [ {
+        "@type" : "WildcardMatcher",
+        "expression" : "verboten:*"
+      }, {
+        "@type" : "NotMatcher",
+        "negatedMatcher" : {
+          "@type" : "SimpleMatcher",
+          "coordinates" : {
+            "artifactId" : "allowed",
+            "groupId" : "verboten"
+          }
+        }
+      } ]
+    }
+  } ]
+}

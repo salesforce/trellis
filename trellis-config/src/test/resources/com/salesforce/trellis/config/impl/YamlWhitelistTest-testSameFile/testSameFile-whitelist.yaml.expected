@@ -1,0 +1,15 @@
+rules:
+
+- action: WARN
+  from:
+  - my:module
+  to:
+  - bar:bar
+  scope: compile
+
+- action: WARN
+  from:
+  - my:module
+  to:
+  - foo:foo
+  scope: compile

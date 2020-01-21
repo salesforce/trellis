@@ -1,0 +1,22 @@
+rules:
+  
+- action: DENY
+  from:
+  - com.salesforce.trellis.tests:module1
+  to:
+  - junit:junit
+  reason: junit is not allowed.
+  
+- action: DENY
+  from:
+  - com.salesforce.trellis.tests:module1
+  to:
+  - javax.inject:javax.inject
+  reason: javax.inject is not allowed.
+  
+- action: DENY
+  from:
+  - com.salesforce.trellis.tests:module1
+  to:
+  - com.google.guava:guava-jdk5
+  

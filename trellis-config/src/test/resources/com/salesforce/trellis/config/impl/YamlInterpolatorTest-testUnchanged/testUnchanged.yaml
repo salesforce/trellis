@@ -1,0 +1,35 @@
+whitelists:
+- file: foo/bar/baz.yaml
+  headerComment: foo bar baz
+  action: ALLOW
+
+groups:
+
+  - name: PE_IMPLS
+    includes:
+      - sfdc.shared:baz
+      - sfdc.core:platform-encryption
+      - sfdc.shared:bar
+    except:
+      - sfdc.ui:*
+      - sfdc.shared:foo
+
+  - name: PE_APIS
+    includes:
+      - sfdc.core:platform-encryption-api
+
+rules:
+
+  - action: DENY
+    from:
+      - myapp:from
+    exceptFrom:
+      - myapp:exceptFrom
+    to:
+      - myapp:to
+    exceptTo:
+      - myapp:exceptTo
+    reason: hello!
+    distance: TRANSITIVE_ONLY
+    optionality: OPTIONAL_ONLY
+    scope: compile

@@ -1,0 +1,29 @@
+groups:
+- name: FOO_TIER
+  includes:
+  - foo:foo-*
+
+- name: BAR_TIER
+  includes:
+  - bar:bar-*
+
+rules:
+- action: DENY
+  from: [FOO_TIER]
+  to: [BAR_TIER]
+
+- action: DENY
+  from:
+  - foo:baz
+  to: [BAR_TIER]
+
+- action: DENY
+  from:
+  - foo:bing
+  to: [BAR_TIER]
+
+- action: WARN
+  from:
+  - foo:please
+  to: [BAR_TIER]
+  reason: please dont depend on this

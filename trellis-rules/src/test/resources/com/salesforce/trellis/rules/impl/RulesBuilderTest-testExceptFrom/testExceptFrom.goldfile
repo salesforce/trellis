@@ -1,0 +1,29 @@
+{
+  "allRules" : [ {
+    "applicableScopes" : [ "compile", "_import", "provided", "runtime", "system", "test" ],
+    "distance" : "ANY",
+    "fromMatcher" : {
+      "@type" : "NotMatcher",
+      "negatedMatcher" : {
+        "@type" : "SimpleMatcher",
+        "coordinates" : {
+          "artifactId" : "special-impl",
+          "groupId" : "myapp"
+        }
+      }
+    },
+    "optionality" : "ANY",
+    "perm" : {
+      "discouraged" : false,
+      "permissible" : false,
+      "reason" : "Only special-impl can depend on special-api"
+    },
+    "toMatcher" : {
+      "@type" : "SimpleMatcher",
+      "coordinates" : {
+        "artifactId" : "special-api",
+        "groupId" : "myapp"
+      }
+    }
+  } ]
+}

@@ -1,0 +1,21 @@
+#
+# Generated file.  DO NOT EDIT
+# See https://sfdc.co/trellisFaq for more information.
+#
+---
+rules:
+
+
+- action: WARN
+  from:
+  - sfdc.core:no-longer-violating-module
+  to:
+  - sfdc.core:newly-acceptable-module
+  reason: This should be removed from the generated whitelist because it no longer depends on junit.
+
+- action: WARN
+  from:
+  - sfdc.core:unprocessed-module
+  to:
+  - junit:junit
+  reason: This should be retained in the updated whitelist because the module was not processed

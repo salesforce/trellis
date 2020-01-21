@@ -1,0 +1,20 @@
+whitelists:
+- file: ${maven.multiModuleProjectDirectory}/.mvn/trellis/whitelists/whitelist.yaml
+  action: WARN
+
+groups:
+- name: TEST_IMPLS
+  includes:
+  - com.salesforce.trellis.tests:module1
+
+- name: TEST_APIS
+  includes:
+  - com.salesforce.trellis.tests:module2
+
+rules:
+- action: DENY
+  from:
+  - TEST_APIS
+  to:
+  - TEST_IMPLS
+  reason: Implementation modules are not allowed to be used in API modules.

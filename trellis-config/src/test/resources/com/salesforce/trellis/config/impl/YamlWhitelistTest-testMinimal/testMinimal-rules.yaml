@@ -1,0 +1,16 @@
+groups:
+- name: PRODUCTION_CODE
+  includes:
+  - sfdc.core:*
+
+- name: JUNIT
+  includes:
+  - junit:junit
+
+rules:
+- action: DENY
+  from:
+  - foo:bar
+  to:
+  - baz:bop
+  whitelist: testMinimal-whitelist.yaml
