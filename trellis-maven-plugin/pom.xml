@@ -27,7 +27,7 @@
         <minimum-coverage.instruction>0</minimum-coverage.instruction>
         <minimum-coverage.branch>0</minimum-coverage.branch>
 
-        <mavenVersion>3.6.0</mavenVersion>
+        <mavenVersion>3.8.4</mavenVersion>
         <takariIntegrationTestVersion>2.9.2</takariIntegrationTestVersion>
     </properties>
 
